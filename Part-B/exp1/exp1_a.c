@@ -66,4 +66,3 @@ printf("\nAfter stuffing the frame is:");
 printf("%s\n",b);
 return 0;
 }
-
