@@ -24,7 +24,7 @@ int visited[MAX], count, mindistance, nextnode, i, j;
 /*pred[] stores the predecessor of each nod
 count gives the number of nodes seen so far and create the cost matrix */
 for(i=0; i<n; i++)
-or(j=0; j<n; j++)
+for(j=0; j<n; j++)
 if(G[i][j]==0)
 cost[i][j]=INFINITY;
 else
@@ -55,7 +55,8 @@ for(i=0; i<n; i++)
 if(!visited[i])
 if((mindistance+cost[nextnode][i])<distance[i])
 {
-distance[i]=nextnode;
+distance[i]=mindistance+cost[nextnode][i];
+pred[i]=nextnode;
 }
 count++;
 }
