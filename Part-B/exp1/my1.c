@@ -22,6 +22,9 @@ int main(){
         if(a[i]=='1'){
              c++;
         }
+            else {
+                c=0
+                }
         b[j]=a[i];
         j++;
         if(c==5){
